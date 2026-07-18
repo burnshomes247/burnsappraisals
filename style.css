@@ -91,6 +91,17 @@ nav {
 
 .nav-cta:hover { background: var(--purple-dark) !important; text-decoration: none !important; }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--gray-dark);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
 /* ---- HERO ---- */
 .hero {
   background: var(--purple-dark);
@@ -318,5 +329,23 @@ textarea { resize: vertical; min-height: 120px; }
   .card-grid-2, .card-grid-3 { grid-template-columns: 1fr; }
   .hero-stats { gap: 1.5rem; }
   .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; padding: 1rem 2rem; }
+  .nav-links .nav-cta { margin: 0.75rem 2rem; text-align: center; }
   .footer-inner { flex-direction: column; }
 }
